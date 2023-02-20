@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 string connectionstring = @"Data Source=LOCALHOST\DESARROLLO;Initial Catalog=HOSPITAL;User ID=sa; Password=";
-builder.Services.AddTransient<RepositoryHospital>();
+builder.Services.AddTransient<RepositoryEmpleados>();
 builder.Services.AddDbContext<HospitalContext>(options => options.UseSqlServer(connectionstring));
 
 builder.Services.AddControllersWithViews();
